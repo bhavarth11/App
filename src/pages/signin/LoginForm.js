@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View, Keyboard} from 'react-native';
 import {withOnyx} from 'react-native-onyx';
 import PropTypes from 'prop-types';
 import _ from 'underscore';
@@ -126,6 +126,7 @@ class LoginForm extends React.Component {
 
         // Check if this login has an account associated with it or not
         Session.fetchAccountDetails(isValidPhoneLogin ? phoneLogin : login);
+        Keyboard.dismiss();
     }
 
     render() {
