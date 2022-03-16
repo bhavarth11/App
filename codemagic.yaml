@@ -1,0 +1,7 @@
+workflows:
+  my-workflow:
+    instance_type: mac_pro
+    environment:
+      node: 16.9.0
+      npm: latest
+      xcode: 12.5
